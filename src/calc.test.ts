@@ -21,3 +21,4 @@ describe("subtracting numbers", () => {
     expect(sub(a, b)).toBe(expected);
   });
 });
+
