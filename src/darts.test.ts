@@ -16,6 +16,24 @@ test('berechnet 2x15, 1x18, 3x19 korrekt', () => {
   test('leerer Wurf ergibt 0 Punkte', () => {
     expect(calcPoints('')).toBe(0);
   });
+  describe('Fehlerfälle in calcPoints', () => {
+    test('Ungerade Anzahl an Zahlen wirft Fehler', () => {
+      expect(() => calcPoints('3 20 1')).toThrow('Ungerade Anzahl');
+    });
+  
+    test('Ungültiger Multiplikator (z. B. 4) wirft Fehler', () => {
+      expect(() => calcPoints('4 20')).toThrow('Ungültiger Multiplikator');
+    });
+  
+    test('Ungültiger Sektorwert (z. B. 25) wirft Fehler', () => {
+      expect(() => calcPoints('2 25')).toThrow('Ungültiger Sektorwert');
+    });
+  
+    test('Nicht-numerische Eingabe wirft Fehler', () => {
+      expect(() => calcPoints('2 zwanzig')).toThrow('Ungültiger Sektorwert');
+    });
+  });
+  
 });
 
 

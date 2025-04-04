@@ -8,7 +8,7 @@ describe("play", () => {
         ["rock", "Scissors",1], //tests if it matters if something is Capitalized in player 2
         ["pAper", "rock", 1], //tests if it matters if something is capitalized in player 1
         ["paper", "Paper", 0], // rest are testing with the amount (adding more capital letters and spaces)
-        ["paper", "sCiSsors",2],
+        ["paper", "sCiSsors",2], 
         ["     scisSOrs", "rock  ", 2],
         ["scissors     ", "   paper", 1],
         ["scissors   ", "scissors",0],
