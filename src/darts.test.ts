@@ -1,4 +1,4 @@
-import { calcPoints } from './darts';
+import { calcPoints, possibleCheckout } from './darts';
 
 describe('calcPoints', () => {
   test('berechnet 3x20, 1x17, 2x4 korrekt', () => {
